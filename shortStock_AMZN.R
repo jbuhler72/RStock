@@ -11,7 +11,7 @@ Quandl.api_key("KEY REQUIRED")
 shortData <- Quandl("FINRA/FNSQ_AMZN", type="raw")
 
 hoWManyObject<-NROW(shortData)
-hoWManyObject#
+hoWManyObject
 
 
 ###shortVolume <- shortData$ShortVolume[1]
