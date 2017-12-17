@@ -1,0 +1,145 @@
+2017-01-13 09:28:41 [103.50.152.122][-][5dmc7dkr6c7akehhr8885caih3][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Hash is invalid. in /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Security.php:637
+Stack trace:
+#0 /var/www/html/yii_framework/common/models/User.php(153): yii\base\Security->validatePassword('i-07edb6cdabed9...', '')
+#1 /var/www/html/yii_framework/common/models/LoginForm.php(45): common\models\User->validatePassword('i-07edb6cdabed9...')
+#2 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#3 /var/www/html/yii_framework/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 /var/www/html/yii_framework/vendor/yiisoft/yii2/validators/Validator.php(265): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#5 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#6 /var/www/html/yii_framework/common/models/LoginForm.php(58): yii\base\Model->validate()
+#7 /var/www/html/yii_framework/backend/controllers/SiteController.php(78): common\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/yii_framework/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/yii_framework/backend/web/index.php(17): yii\base\Application->run()
+#15 {main}
+2017-01-13 09:28:41 [103.50.152.122][-][5dmc7dkr6c7akehhr8885caih3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'cDdXeEZuZVJEYTU8MiQEBiNzeh9.ISoDFkYuIhACJw00bmchdVYyNA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'i-07edb6cdabed91783'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c6d1ef7380d089bd4fc7093c6b39f5d5e65d67b02b107bd5989f5732fd85fe62a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4VbDtJaTSD-g8OOQfqyZVlB_DY0Y38Wf\";}'
+    '_csrf-frontend' => '19b7e438d3fc5e58da55996f0ce556ed7cc2a6f603228d8a97f10a57b976a879a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LjzooFpSjFJGgiy6TiPfXPeD5qR5A-IJ\";}'
+    'advanced-frontend' => '7raph53852qi48h78gkvc81fh7'
+    'advanced-backend' => '5dmc7dkr6c7akehhr8885caih3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/yii_framework/backend/web/index.php'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '54.163.140.249'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '232'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://54.163.140.249'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://54.163.140.249/yii_framework/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=c6d1ef7380d089bd4fc7093c6b39f5d5e65d67b02b107bd5989f5732fd85fe62a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224VbDtJaTSD-g8OOQfqyZVlB_DY0Y38Wf%22%3B%7D; _csrf-frontend=19b7e438d3fc5e58da55996f0ce556ed7cc2a6f603228d8a97f10a57b976a879a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22LjzooFpSjFJGgiy6TiPfXPeD5qR5A-IJ%22%3B%7D; advanced-frontend=7raph53852qi48h78gkvc81fh7; advanced-backend=5dmc7dkr6c7akehhr8885caih3'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 54.163.140.249 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '54.163.140.249'
+    'SERVER_ADDR' => '172.31.63.240'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '103.50.152.122'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/yii_framework/backend/web/index.php'
+    'REMOTE_PORT' => '44040'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/yii_framework/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/yii_framework/backend/web/index.php'
+    'PHP_SELF' => '/yii_framework/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484299721.516
+    'REQUEST_TIME' => 1484299721
+]
+2017-09-20 02:48:47 [65.130.72.131][1][0vur0rnjoat0774nv913ufl565][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "gii". in /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Module.php:462
+Stack trace:
+#0 /var/www/html/yii_framework/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('gii', Array)
+#1 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/yii_framework/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/yii_framework/vendor/yiisoft/yii2/web/Application.php:112
+Stack trace:
+#0 /var/www/html/yii_framework/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/yii_framework/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+2017-09-20 02:48:47 [65.130.72.131][1][0vur0rnjoat0774nv913ufl565][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-backend' => '0vur0rnjoat0774nv913ufl565'
+    '_csrf-backend' => 'ea651ba954cf6763ab7ac546abb30ec31a6166b08d6b6038b9a22ebc272f0110a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"BJx-o4FUVIuZK8guhDBhyxOA9NFcX1S4\";}'
+    '_identity-backend' => '4a0c7b1a1bec966018f6b09da38fdf4dc7b19519ea876da291b827c1c5e07c8ea:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"uNAJqBJABZhkxjr4_YtxI2X_By63aMKx\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/yii_framework/backend/web/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ec2-35-164-220-218.us-west-2.compute.amazonaws.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-backend=0vur0rnjoat0774nv913ufl565; _csrf-backend=ea651ba954cf6763ab7ac546abb30ec31a6166b08d6b6038b9a22ebc272f0110a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22BJx-o4FUVIuZK8guhDBhyxOA9NFcX1S4%22%3B%7D; _identity-backend=4a0c7b1a1bec966018f6b09da38fdf4dc7b19519ea876da291b827c1c5e07c8ea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22uNAJqBJABZhkxjr4_YtxI2X_By63aMKx%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at ec2-35-164-220-218.us-west-2.compute.amazonaws.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'ec2-35-164-220-218.us-west-2.compute.amazonaws.com'
+    'SERVER_ADDR' => '172.31.21.56'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '65.130.72.131'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/yii_framework/backend/web/index.php'
+    'REMOTE_PORT' => '58876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/yii_framework/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/yii_framework/backend/web/index.php'
+    'PHP_SELF' => '/yii_framework/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1505875727.118
+    'REQUEST_TIME' => 1505875727
+]
