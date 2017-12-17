@@ -8,7 +8,7 @@ is the current data structure for mysql, I am taking the data using R and puttin
 
 My goal is to use Yii to show all the data in trends and comparisons. For now I am just writing HTML and PHP to show the data that I pull out of the tables.
 
-I know this is a huge work in progress, but it is a great place to start.
+I know this is a huge work in progress, but it is a great place to start. tt
 
 
 
