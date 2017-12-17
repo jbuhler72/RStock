@@ -44,11 +44,16 @@
 
     <main role="main" class="container">
       <div class="jumbotron">
+          
+         In progress I am tying not to just write php and HTML so I am moving this to Yii
+        <a href="http://ec2-52-42-42-154.us-west-2.compute.amazonaws.com/yii_framework/stockYii/web/"> Yii </a> 
         <h1>Stock Data</h1>
         
         <p class="lead">I am a Computer Scientist who loves to program. I have been taking data from Quandl putting it into R and then I analyze the data, here are my results.</p>
         <a class="btn btn-lg btn-primary" href="analyze.php/" role="button">Analyze Shorts</a>
       </div>
+        
+        
     </main>
 
 
