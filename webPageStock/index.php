@@ -45,7 +45,7 @@
     <main role="main" class="container">
       <div class="jumbotron">
           
-         In progress I am tying not to just write php and HTML so I am moving this to
+         I am tying not to just write php and HTML so I am moving this to
         <a href="http://ec2-52-42-42-154.us-west-2.compute.amazonaws.com/yii_framework/stockYii/web/"> Yii </a> 
         <h1>Stock Data</h1>
         
