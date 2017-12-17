@@ -3,8 +3,8 @@ Using R to study stocks
 
 First step in the stock directory
 Create file titled dbConnect.php
-in this file add but with your correct data
-$link = mysqli_connect("host", "userName", "password", "stock");  
+in this file add line $link = mysqli_connect("host", "userName", "password", "stock"); 
+but add your data. 
 
 
 
