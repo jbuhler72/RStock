@@ -46,8 +46,8 @@
       <div class="jumbotron">
         <h1>Stock Data</h1>
         
-        <p class="lead">I am a Computer Scientistsss who loves to program. I have been taking data from Quandl putting it into R and then I analyze the data, here are my results.</p>
-        <a class="btn btn-lg btn-primary" href="/stock/medovex.php/" role="button">Analyze Shorts</a>
+        <p class="lead">I am a Computer Scientist who loves to program. I have been taking data from Quandl putting it into R and then I analyze the data, here are my results.</p>
+        <a class="btn btn-lg btn-primary" href="medovex.php/" role="button">Analyze Shorts</a>
       </div>
     </main>
 

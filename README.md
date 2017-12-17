@@ -1,6 +1,13 @@
 # RStock
 Using R to study stocks
 
+First step in the stock directory
+Create file titled dbConnect.php
+in this file add but with your correct data
+$link = mysqli_connect("host", "userName", "password", "stock");  
+
+
+
 shortStock_AMZN.R: is R code that will take data from Quandl and get all the shorts from Amazon, I want to be able to use one file to read many stocks. I did create a Mysql database to store the short data. My goal in this file is to get more stock data for shorts then just Amazon. And I want to also run Quandl to analyze more than just shorts.
 
 createTables.sql:

@@ -61,7 +61,11 @@
       function showData($startDate,$endDate,$monthYearName,$stockSymbol)
       {
         //Need to get this in a file
-        $link = mysqli_connect("host", "userName", "password", "stock");       
+        include 'dbConnect.php';
+        //$link = mysqli_connect("host", "userName", "password", "stock");       
+        
+        
+        
         $select="select * from shorts where shortDate between '$startDate' and  '$endDate' and stockSymbol='$stockSymbol'";
         $result=mysqli_query($link,$select)or die('could not execute function query');
         while ($row=mysqli_fetch_array($result))
