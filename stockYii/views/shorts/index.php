@@ -12,25 +12,24 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="shorts-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <table class='table'>    
+        
+    <?php
+    
 
-    <p>
-        <?= Html::a('Create Shorts', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'stockSymbol',
-            'shortVolume',
-            'shortDate',
-            'shortTotalVolume',
-            // 'ShortExemptVolume',
-            // 'exchange',
-            // 'shortPercent',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    
+    foreach ($shortData as $row) {
+        echo "<tr>";
+        $stockSymbol=$row->stockSymbol;
+        echo "<td><a href='../web/index.php?r=stocks&stockSymbol=$stockSymbol'>$stockSymbol</a></td>"; 
+        echo "<td> $row->shortDate </td>";
+        echo "<td> $row->shortVolume </td>";
+       echo "</tr>";
+     }
+    
+    
+    ?>
+    </table> 
+    
+ 
 </div>

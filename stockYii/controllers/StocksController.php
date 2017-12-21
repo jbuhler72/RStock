@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ShortsController implements the CRUD actions for Shorts model.
+ * StocksController implements the CRUD actions for Shorts model.
  */
-class ShortsController extends Controller
+class StocksController extends Controller
 {
     /**
      * @inheritdoc
@@ -35,17 +35,12 @@ class ShortsController extends Controller
      */
     public function actionIndex()
     {
-       
-        
-        
-     $shortData = Shorts::find()->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Shorts::find(),
+        ]);
 
-
-        
-        
-        
         return $this->render('index', [
-            'shortData' => $shortData,
+            'dataProvider' => $dataProvider,
         ]);
     }
 

@@ -13,6 +13,8 @@ $this->title = 'Analyze Stocks';
 
         <p><a class="btn btn-lg btn-success" href="../web/index.php?r=shorts">Shorts</a></p>
     </div>
+    
+      
 
     <div class="body-content">
 
