@@ -35,13 +35,10 @@ class ShortsController extends Controller
      */
     public function actionIndex()
     {
-       
-        
-        
-     $shortData = Shorts::find()->all();
-
-
-        
+    $shortData = Shorts::find()
+                ->select('stockSymbol')
+		->groupBy('stockSymbol')
+		->all();  
         
         
         return $this->render('index', [

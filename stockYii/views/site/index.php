@@ -11,7 +11,7 @@ $this->title = 'Analyze Stocks';
 
         <p class="lead">Stocks</p>
 
-        <p><a class="btn btn-lg btn-success" href="../web/index.php?r=shorts">Shorts</a></p>
+        <p><a class="btn btn-lg btn-success" href="../web/index.php?r=shorts">Interesting Stocks</a></p>
     </div>
     
       
