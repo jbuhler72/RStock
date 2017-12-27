@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Shorts;
+use app\models\SymbolExchange;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -35,12 +36,26 @@ class StocksController extends Controller
      */
     public function actionIndex()
     {
+        
+        $stockSymbol=$_GET['stockSymbol'];
+        
+        $exchange = SymbolExchange::find()
+                ->select('exchange')
+                ->where(['symbol' => $stockSymbol])
+		->all(); 
+        
+        
+        
         $dataProvider = new ActiveDataProvider([
             'query' => Shorts::find(),
         ]);
-
+        
+        
+        
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'stockSymbol' => $stockSymbol,
+            'exchange' => $exchange,
         ]);
     }
 

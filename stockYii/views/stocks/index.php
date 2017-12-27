@@ -8,8 +8,15 @@ use yii\grid\GridView;
 
 $this->title = 'Stocks';
 $this->params['breadcrumbs'][] = $this->title;
-$stockSymbol=$_GET['stockSymbol'];
+
 echo $stockSymbol;
+
+foreach ($exchange as $row) {
+        $exchangeData=$row->exchange;
+        }
+echo "<br>";
+echo $exchangeData;
+
 ?>
 <style>
     .left {
@@ -31,7 +38,7 @@ echo $stockSymbol;
     new TradingView.widget({
       "width": 980,
       "height": 610,
-      "symbol": "NYSE:<?php echo $stockSymbol;?>",
+      "symbol": "<?php echo $exchangeData.':'.$stockSymbol;?>",
       "interval": "D",
       "timezone": "Etc/UTC",
       "theme": "Light",
