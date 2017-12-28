@@ -6,23 +6,20 @@ $this->title = 'Analyze Stocks';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Analyze</h1>
-
-        <p class="lead">Stocks</p>
-
-        <p><a class="btn btn-lg btn-success" href="../web/index.php?r=shorts">Interesting Stocks</a></p>
-    </div>
+  
     
       
 
     <div class="body-content">
+          
 
         <div class="row">
             <div class="col-lg-4">
                 <h2>Git Hub</h2>
 
-                <p>I have started a gitHub repository, please contribute so we can make a fantastic site to analyze stocks.</p>
+                <p>My first love is programming and my second is learning about stocks.
+                   I have started a gitHub repository, I built this site off of the framework Yii 2.0. 
+                   Please contribute so we can make a fantastic site to analyze stocks.</p>
 
                 <p><a class="btn btn-default" href="https://github.com/jbuhler72/RStock">github &raquo;</a></p>
             </div>
@@ -41,6 +38,10 @@ $this->title = 'Analyze Stocks';
                 <p><a class="btn btn-default" href="https://www.tableau.com">Tableau &raquo;</a></p>
             </div>
         </div>
-
+            <div>
+                <p align='center'><a class="btn btn-lg btn-success" href="../web/index.php?r=shorts">Analyze Stocks</a>
+                    
+                </p>
+            </div>
     </div>
 </div>

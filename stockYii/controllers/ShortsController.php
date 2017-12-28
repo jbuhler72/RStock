@@ -36,11 +36,12 @@ class ShortsController extends Controller
     public function actionIndex()
     {
     $shortData = Shorts::find()
-                ->select('stockSymbol')
-		->groupBy('stockSymbol')
-		->all();  
+                ->select ('stockSymbol')
+		->groupby('stockSymbol')
+                ->all();
         
-        
+    // //SELECT DISTINCT(stockSymbol) as stocksData,shortDate,shortVolume,exchange FROM shorts  where shortDate =(select MAX(shortDate) from shorts group by stockSymbol limit 0,1)       
+    
         return $this->render('index', [
             'shortData' => $shortData,
         ]);
