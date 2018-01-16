@@ -1,7 +1,8 @@
 <?php
 
 namespace app\controllers;
-
+use app\models\Shorts;
+use app\models\SymbolExchange;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -61,7 +62,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+          $shortData = Shorts::find()
+                ->select ('stockSymbol')
+		->groupby('stockSymbol')
+                ->all();
+        
+    // //SELECT DISTINCT(stockSymbol) as stocksData,shortDate,shortVolume,exchange FROM shorts  where shortDate =(select MAX(shortDate) from shorts group by stockSymbol limit 0,1)       
+    
+        return $this->render('index', [
+            'shortData' => $shortData,
+        ]);
     }
 
     /**
